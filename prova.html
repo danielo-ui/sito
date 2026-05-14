@@ -1,7 +1,24 @@
 <!doctype html>
 <html>
 <body>
-<h1> ciao </h1>
-<img src="hello.jpg" alt="hello"">
+<h1>ciao</h1>
+<img src="hello.jpg" alt="hello">
+
+<br><br>
+
+<button onclick="mostraFrase()">
+    Mostra frase
+</button>
+
+<p id="testo" style="display:none;">
+    Benvenuto nel mio sito!
+</p>
+
+<script>
+function mostraFrase() {
+    document.getElementById("testo").style.display = "block";
+}
+</script>
+
 </body>
 </html>
