@@ -1,24 +1,131 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>I miei siti</title>
+<style>
+  :root {
+    --bg: #fafafa;
+    --text: #1a1a1a;
+    --muted: #6b6b6b;
+    --line: #dddddd;
+    --accent: #2a5adf;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    margin: 0;
+    padding: 4rem 1.5rem;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+  }
+
+  main {
+    width: 100%;
+    max-width: 480px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0 0 0.4rem;
+  }
+
+  p.subtitle {
+    color: var(--muted);
+    margin: 0 0 2.5rem;
+    font-size: 0.95rem;
+  }
+
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    border-bottom: 1px solid var(--line);
+  }
+
+  li:first-child {
+    border-top: 1px solid var(--line);
+  }
+
+  a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 0.25rem;
+    color: var(--text);
+    text-decoration: none;
+  }
+
+  a:hover, a:focus-visible {
+    color: var(--accent);
+  }
+
+  a:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 2px;
+  }
+
+  .name {
+    font-size: 1rem;
+  }
+
+  .desc {
+    display: block;
+    color: var(--muted);
+    font-size: 0.85rem;
+    margin-top: 0.15rem;
+  }
+
+  footer {
+    margin-top: 3rem;
+    color: var(--muted);
+    font-size: 0.8rem;
+  }
+</style>
+</head>
 <body>
-<h1>ciao</h1>
-<img src="hello.jpg" alt="hello">
+<main>
+  <h1>I miei siti</h1>
+  <p class="subtitle">Un elenco dei progetti e delle pagine che gestisco.</p>
 
-<br><br>
+  <ul>
+    <li>
+      <a href="https://esempio1.it" target="_blank" rel="noopener">
+        <span>
+          <span class="name">Nome sito 1</span>
+          <span class="desc">Breve descrizione del sito</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="https://esempio2.it" target="_blank" rel="noopener">
+        <span>
+          <span class="name">Nome sito 2</span>
+          <span class="desc">Breve descrizione del sito</span>
+        </span>
+      </a>
+    </li>
+    <li>
+      <a href="https://esempio3.it" target="_blank" rel="noopener">
+        <span>
+          <span class="name">Nome sito 3</span>
+          <span class="desc">Breve descrizione del sito</span>
+        </span>
+      </a>
+    </li>
+  </ul>
 
-<button onclick="mostraFrase()">
-    Cliccami
-</button>
-
-<p id="testo" style="display:none;">
-    Bravo
-</p>
-
-<script>
-function mostraFrase() {
-    document.getElementById("testo").style.display = "block";
-}
-</script>
-
+  <footer>Aggiornato il 2026</footer>
+</main>
 </body>
 </html>
